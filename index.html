@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different ways to access the properties of JS Object and run JS code through Node JS</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* here we can write css */
+    </style>
+    <script src="./js/script.js"></script>
+    <script>
+        // here we can write JS code
+    </script>
+</head>
+
+<body>
+    <h1>JS Datatype</h1>
+    <ol>
+        <li>Number</li>
+        <li>String</li>
+        <li>Object</li>
+    </ol>
+    <p data-dev="demo3"></p>
+
+
+    <script src="./js/script.js"></script>
+    <script>
+        var $student1 = {   //this is an object 
+            //1. property:value
+            name: "Brendan",
+            surname: 'Eich'
+            //2.
+        }
+        let _student2 = {// this is an Object
+            //1. Property:value
+            name: "Mahesh",
+            surname: 'Suryavanshi'
+
+            //.2  
+        }
+        const student3 = {  //This is an Object
+            //1. Property:value
+            name: "Atul",
+            surname: `Verma`
+            //2. 
+        }
+        var student4 = {
+            name: "Ananad",
+            surname: 'Verma',
+            age: 25
+        }
+
+        //there are 3 ways to access the property of JS object
+
+        //the 1st way  to access the property of Object is-
+        //1st method to log/display the JS code is-
+        console.log($student1.name + " " + $student1.surname);
+
+        //the second way to access object property is-
+        //second method to log/display the JS code is-
+        //2.alert()
+        alert(_student2["name"] + " " + _student2["surname"]);
+
+        //third way to access the object property is-
+        //3rd methopd to log/display JS code is-
+        let x = "name";
+        let y = "surname";
+        //this is output through custom attribute
+        document.querySelector('p[data-dev = "demo3"]').innerHTML = student3[x] + ` ` + student3[y];
+        // alert merthod to log/display the js code
+        alert(student3.name);
+        // This is document.write() method to display JS code
+        document.write('<h3>' + student4["name"] + ' ' + student4["surname"] + '</h3>');
+
+
+    </script>
+</body>
+
+</html>
